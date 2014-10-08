@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codepath.apps.SimpleTwitterApp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".TwitterApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="RestClient.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cpbasictweets"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HomeAcitivity"
+            android:label="@string/title_activity_home_acitivity" >
+        </activity>
+        <activity
+            android:name=".activities.ProfileViewActivity"
+            android:label="@string/title_activity_profile_view" >
+        </activity>
+        <activity
+            android:name=".activities.ViewAllTweets"
+            android:label="@string/title_activity_view_all_tweets" >
+        </activity>
+        <activity
+            android:name=".activities.FollowerListViewActivity"
+            android:label="@string/title_activity_follower_list_view" >
+        </activity>
+        <activity
+            android:name=".activities.FollowingListViewActivity"
+            android:label="@string/title_activity_following_list_view" >
+        </activity>
+        <activity
+            android:name=".activities.DetailedTweetViewActivity"
+            android:label="@string/title_activity_detailed_tweet_view" >
+        </activity>
+        <activity
+            android:name=".activities.MessageListViewActivty"
+            android:label="@string/title_activity_message_list_view_activty" >
+        </activity>
+        <activity
+            android:name=".activities.SearchTwitterActivity"
+            android:label="@string/title_activity_search_result_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codepath.apps.SimpleTwitterApp.activities.HomeAcitivity" />
+        </activity>
+        <activity
+            android:name="com.codepath.apps.SimpleTwitterApp.activities.ImageViewActivity"
+            android:label="@string/title_activity_image_view" >
+        </activity>
+    </application>
+
+</manifest>

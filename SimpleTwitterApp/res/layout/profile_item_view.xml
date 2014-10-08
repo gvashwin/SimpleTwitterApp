@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <RelativeLayout 
+        android:layout_width="77dp"
+        android:layout_height="match_parent">
+        <ImageView 
+            android:id="@+id/ivProfileImg"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_launcher"/>    
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView 
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="ProfileName"
+            android:textSize="20dp"/>
+        <TextView 
+            android:id="@+id/tvProfileHandle"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+			android:layout_below="@+id/tvProfileName"            
+            android:text="ProfileHandle"
+            android:textColor="#ccd6dd"
+            android:textSize="16dp"/>
+         <TextView 
+            android:id="@+id/tvProfileBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_below="@+id/tvProfileHandle"            
+            android:text="Some Description about the profile, less than 140 charaters"
+            android:textColor="#66757f"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+    
+
+</LinearLayout>

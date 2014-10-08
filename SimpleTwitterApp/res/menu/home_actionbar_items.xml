@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/miMessages"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_ab_msg_envelop"
+        android:onClick="showDirectMessages"
+        android:title="Messages" >
+    </item>
+    <item
+        android:id="@+id/miComposeTweet"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_ab_compose_tweet"
+        android:onClick="composeTweet"
+        android:title="Tweet" >
+    </item>
+    <item
+        android:id="@+id/miSearch"
+        android:showAsAction="always"
+      	android:onClick="startSearchActivity"
+        android:icon="@drawable/ic_ab_search"
+        android:title="Search" >
+    </item>
+    <item
+        android:id="@+id/miProfile"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_ab_profile"
+        android:onClick="showUserProfile"
+        android:title="Profile" >
+    </item>
+
+</menu>

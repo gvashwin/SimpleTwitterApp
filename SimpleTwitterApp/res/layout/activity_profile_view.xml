@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+	<LinearLayout 
+	    android:id="@+id/llStats"
+	    android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/vpPager">
+	    <LinearLayout
+	        android:id="@+id/llTweets"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_marginRight="0dp"
+	        android:background="@drawable/border"
+	        android:onClick="loadMoreTweets"
+	        android:orientation="vertical" >
+		    <TextView
+		        android:id="@+id/tvTweetsCount"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:text="TCOUNT"
+		        android:textSize="20dp" />
+		    <TextView
+		        android:id="@+id/tvTweetsLbl"
+		        android:paddingLeft="10dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="TWEETS" />
+	    </LinearLayout>
+	    <LinearLayout
+	        android:id="@+id/llFollowing"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:layout_marginRight="0dp"
+		    android:layout_toRightOf="@+id/llTweets"
+		    android:background="@drawable/border"
+		    android:onClick="showFollowingList"
+		    android:orientation="vertical" >
+		    <TextView
+		        android:id="@+id/tvFollowingCount"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:text="FCOUNT"
+		        android:textSize="20dp" />
+		    <TextView
+		        android:id="@+id/tvFollowingLbl"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:text="FOLLOWING" />
+	    </LinearLayout>
+	    <LinearLayout
+	        android:id="@+id/llFollowers"
+	        android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+	        android:layout_alignParentRight="true"
+	        android:layout_toRightOf="@+id/llFollowing"
+	        android:background="@drawable/border"
+	        android:onClick="showFollowerList"
+	        android:orientation="vertical" >
+	
+		    <TextView
+		        android:id="@+id/tvFollowerCount"
+		        android:layout_width="wrap_content"	
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:text="FRCOUNT"
+		        android:textSize="20dp" />
+		    <TextView
+		        android:id="@+id/tvFollowerLbl"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:paddingBottom="5dp"
+		        android:text="FOLLOWERS" />
+	    </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvProfileTweets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/llStats" >
+
+    </ListView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpPager"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </android.support.v4.view.ViewPager>
+
+    <ProgressBar
+        android:id="@+id/pbVpPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llStats"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

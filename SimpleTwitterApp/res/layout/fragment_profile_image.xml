@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlFragmentProfileImg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/t_grey2" >
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_ab_profile"
+        android:background="#FFFFFF"
+        android:padding="3dp" />
+
+    
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivProfilePic"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:text="Screen Name" />
+   
+    <ImageView
+        android:id="@+id/ivVerifiedIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/tvProfileName"
+        android:layout_alignBottom="@+id/tvProfileName"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_verified" />
+
+    <TextView
+        android:id="@+id/tvProfileTwitterHndl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tvProfileName"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:text="TwitterHandle" />
+
+</RelativeLayout>
