@@ -87,6 +87,7 @@
 	        android:layout_marginLeft="5dp"
 	        android:ellipsize="end"
 	        android:includeFontPadding="false"
+	        android:autoLink="all"
 	        android:text="Some Tweet Text. Will be less than or equal to140 chars"
 	        android:gravity="top"
 	        android:textAlignment="gravity" />

@@ -112,7 +112,9 @@ public class ViewAllTweets extends Activity {
 		if(!netUtil.isNetworkAvailable(getApplicationContext())) {
 			Toast.makeText(getApplicationContext(), "Network Unavailable", Toast.LENGTH_SHORT).show();
 		} else {
-			client.getAccountRecentTweets(profileId,null, lastLoadedTweetId,reponseHandler);
+			if(lastLoadedTweetId!=null) {
+				client.getAccountRecentTweets(profileId,null, lastLoadedTweetId,reponseHandler);
+			}
 		}
 	}
 	public void fillTimeLineWithTweets() {
