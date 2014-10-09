@@ -50,4 +50,4 @@ This is a twitter android app, which is an enchance to the last week twitter app
 
 ##App Demo
 ### App Walkthrough Demo
-[Video Walkthrough - App Demo]
+[Video Walkthrough - App Demo Please see it in HD :) ] (https://vimeo.com/108427267)
